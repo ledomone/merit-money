@@ -1,6 +1,6 @@
 <h1>Dashboard</h1>
-{{#each mode.coworkers as |coworker|}}
 <ul>
+{{#each Model.coworkers as |coworker|}}
 <li>
   {{link-to coworker.fullName 'dashboard.index.coworker' coworker}}
 </li>
