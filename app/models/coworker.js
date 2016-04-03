@@ -1,3 +1,4 @@
+
 import DS from 'ember-data';
 
 export default DS.Model.extend({
@@ -6,13 +7,11 @@ export default DS.Model.extend({
   lastName: DS.attr('string'),
   avatarUrl: DS.attr('string'),
 
-  fullName: Ember.computed('firstName', 'lastName'
-function() {
-  return '${this.get('firstName')} ${this.get('lastName')}';
+  fullName: Ember.computed('firstName', 'lastName', function() {
+    return `${this.get('firstName')} ${this.get('lastName')}`;
+  }),
 
-}),
-  nickname: Ember.computed('email', function(){
+  nickname: Ember.computed('email', function() {
     return this.get('email').split('@')[0];
   })
-
 });
