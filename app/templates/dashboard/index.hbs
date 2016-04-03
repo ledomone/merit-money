@@ -1,6 +1,9 @@
 <h1>Dashboard</h1>
+{{#each mode.coworkers as |coworker|}}
 <ul>
-  <li> {{ "nickname" 'dashboard.index.coworker' "name"}}</li>
+<li>
+  {{link-to coworker.fullName 'dashboard.index.coworker' coworker}}
+</li>
+{{/each}}
 </ul>
-
 {{outlet}}
