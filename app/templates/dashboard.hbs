@@ -1,6 +1,8 @@
 <h1>Dashboard</h1>
     <ul>
-      <li>{{input value=include }}</li>
+      <li>{{input value=name insert-newline='reload'}}</li>
+      <li>{{input value=order insert-newline='reload'}}</li>
+      <li {{ action "reload"}}> Reload! </li>
 </ul>
 <ul>
  {{#each Model.coworkers as |coworker|}}
@@ -13,5 +15,7 @@
   {{coworker.fullName}}
 </li>
 {{/link-to}}
+{{else}}
+Nobody is registered...yet.
 {{/each}}
 </ul>
