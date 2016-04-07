@@ -9,10 +9,9 @@ export default Ember.Route.extend({
   order: {}
 },
 
-  model(params) {
-      coworkers: this.store.query('coworker', params)
-    });
-  },
+  // model(params) {
+  //     coworkers: this.store.query('coworker', params);
+  // },
 
 actions: {
   reload() {
