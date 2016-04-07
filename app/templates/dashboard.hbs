@@ -1,1 +1,17 @@
-{{outlet}}
+<h1>Dashboard</h1>
+    <ul>
+      <li>{{input value=include }}</li>
+</ul>
+<ul>
+ {{#each Model.coworkers as |coworker|}}
+
+  {{#link-to 'dashboard.coworker' coworker}}
+<li>
+  <strong>
+    ({{coworker.kudos_total_value}})
+  </strong>
+  {{coworker.fullName}}
+</li>
+{{/link-to}}
+{{/each}}
+</ul>
