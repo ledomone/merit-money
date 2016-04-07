@@ -9,7 +9,7 @@ export default Ember.Route.extend({
   },
   afterModel(model, transition) {
     if (model.coworkers) {
-      this.transitionTo('dashboard.index.coworker', model.coworkers.get('firstObject'));
+      this.transitionTo('dashboard.coworker', model.coworkers.get('firstObject'));
 
     }
   }
