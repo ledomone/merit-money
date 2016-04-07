@@ -1,0 +1,17 @@
+<h2>About Coworker</h2>
+
+<h3> nickname: {{model.nickname}}</h3>
+<img src={{model.avatarUrl}} />
+{{link-to 'Add Kudo' 'dashboard.coworker.kudo-new'}}
+<div>
+  {{outlet}}
+</div>
+
+<h4>received kudos</h4>
+
+{{#each model.kudos as |kudo|}}
+  <li>
+    <strong>{{kudo.value}}</strong>
+    <i>{{kudo.comment}}</i>
+  </li>
+{{/each}}
