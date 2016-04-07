@@ -10,10 +10,10 @@ export default Ember.Route.extend({
 },
 
   model(params) {
-      coworkers: this.store.queryRecord('coworker', params)
+      coworkers: this.store.query('coworker', params)
     });
   },
-  
+
 actions: {
   reload() {
     this.transitionTo('dashboard');
